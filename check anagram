@@ -1,0 +1,7 @@
+def findAnagram(a,b):
+    a1=re.sub('\s+','',a).lower()
+    b1=re.sub('\s+','',b).lower()
+    if sorted(a1)==sorted(b1):
+        print('True')
+    else:
+        print('False')
