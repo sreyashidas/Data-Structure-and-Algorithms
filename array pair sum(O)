@@ -1,0 +1,10 @@
+def ArrayPairWithSum(a,sum):
+    dict={}
+    output=set()
+    for i in a:
+        if (sum-i) not in dict.values():
+            dict[i]=i
+        else:
+            output.add((i,sum-i))
+    print (len(output))
+    print (list(output))
