@@ -1,0 +1,15 @@
+def findMissingElement(a,b):
+    count={}
+    for i in a:
+        if i in count:
+            count[i]+=1
+        else:
+            count[i]=1
+            
+    for j in b:
+        if j in count:
+            count[j]-=1
+
+    for i in count:
+        if count[i]!=0: print (i)
+            
