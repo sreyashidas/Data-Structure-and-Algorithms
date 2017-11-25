@@ -1,0 +1,18 @@
+import re
+def Find (pat, text):
+  match=re.search(pat,text)
+  if match:
+    print 'Found'+' '+ match.group()
+  else:
+    print 'Not found'
+    
+Find('ig','Pig')
+Find('ii','Pig')
+Find('..g','Pig')
+Find(r'\..y','Pig is xyghhhn. yjik')
+Find(r':\w\w\w','blah:cat blah blah')
+Find(r':.\d\d\d','blah:cat : 123 blah blah')
+Find(r'\d\s+\d\s+\d','1 2  3')
+Find(r'\w+',': kitten blah blah')
+Find(r'\S+',':das.sreyashi@gmail.com sreyashi.cse@gmail.com')
+Find(r'[\w.]+@[\w.]+',':das.sreyashi@gmail.com sreyashi.cse@gmail.com')
