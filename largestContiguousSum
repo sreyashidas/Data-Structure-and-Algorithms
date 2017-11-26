@@ -1,0 +1,7 @@
+def finLarge(a):
+    max_sum = current_sum = a[0]
+    for num in a[1:]:
+        current_sum = max(current_sum+num, num)
+        max_sum = max(current_sum, max_sum)
+        
+    return max_sum
