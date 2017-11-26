@@ -1,0 +1,16 @@
+def rev_sentence(a):
+    if len(a) == 0 :
+        return 0
+    
+    words = []
+    i=0
+    while i < len(a):
+        if a[i] != ' ':
+            word_start = i
+            print (i,word_start)
+            while i <len(a) and a[i] != ' ':
+                 i+=1
+            words.append(a[word_start:i])
+        i+=1
+    return ' '.join(words[::-1])
+
