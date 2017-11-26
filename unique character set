@@ -1,0 +1,7 @@
+def uniq_chars(a):
+    chars=set()
+    for i in a:
+        if i in chars:
+            return False
+        else: chars.add(i)
+    return True
